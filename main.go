@@ -51,6 +51,10 @@ func (c *Colony) checkSurrounding(colonies map[string]Colony) int {
 }
 
 func main() {
+	if len(os.Args) < 2 {
+		fmt.Println("Type a number dummy")
+		os.Exit(0)
+	}
 	iterations, err := strconv.Atoi(os.Args[1])
 	if err != nil {
 		fmt.Printf("Error: %v\n", err)
