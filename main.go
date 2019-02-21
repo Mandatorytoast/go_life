@@ -53,7 +53,7 @@ func (c *Colony) checkSurrounding(colonies map[string]Colony) int {
 func main() {
 	iterations, err := strconv.Atoi(os.Args[1])
 	if err != nil {
-		fmt.Printf("You should type a number dummy")
+		fmt.Printf("Error: %v\n", err)
 	}
 	initerr := termbox.Init()
 	defer termbox.Close()
